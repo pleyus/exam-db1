@@ -56,7 +56,7 @@
             this.columnHeader3});
             this.lista.Location = new System.Drawing.Point(12, 12);
             this.lista.Name = "lista";
-            this.lista.Size = new System.Drawing.Size(463, 269);
+            this.lista.Size = new System.Drawing.Size(458, 265);
             this.lista.TabIndex = 0;
             this.lista.UseCompatibleStateImageBehavior = false;
             this.lista.View = System.Windows.Forms.View.Details;
@@ -83,7 +83,7 @@
             // nuevo
             // 
             this.nuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.nuevo.Location = new System.Drawing.Point(377, 299);
+            this.nuevo.Location = new System.Drawing.Point(372, 295);
             this.nuevo.Name = "nuevo";
             this.nuevo.Size = new System.Drawing.Size(98, 23);
             this.nuevo.TabIndex = 1;
@@ -93,8 +93,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 299);
+            this.label1.Location = new System.Drawing.Point(9, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 2;
@@ -102,15 +103,17 @@
             // 
             // especialidad
             // 
-            this.especialidad.Location = new System.Drawing.Point(12, 315);
+            this.especialidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.especialidad.Location = new System.Drawing.Point(12, 311);
             this.especialidad.Name = "especialidad";
             this.especialidad.Size = new System.Drawing.Size(294, 20);
             this.especialidad.TabIndex = 3;
             // 
             // labeln
             // 
+            this.labeln.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labeln.AutoSize = true;
-            this.labeln.Location = new System.Drawing.Point(101, 350);
+            this.labeln.Location = new System.Drawing.Point(101, 346);
             this.labeln.Name = "labeln";
             this.labeln.Size = new System.Drawing.Size(43, 13);
             this.labeln.TabIndex = 2;
@@ -118,14 +121,16 @@
             // 
             // periodo
             // 
-            this.periodo.Location = new System.Drawing.Point(104, 366);
+            this.periodo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.periodo.Location = new System.Drawing.Point(104, 362);
             this.periodo.Name = "periodo";
             this.periodo.Size = new System.Drawing.Size(93, 20);
             this.periodo.TabIndex = 3;
             // 
             // nivel
             // 
-            this.nivel.Location = new System.Drawing.Point(12, 366);
+            this.nivel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.nivel.Location = new System.Drawing.Point(12, 362);
             this.nivel.Maximum = new decimal(new int[] {
             10,
             0,
@@ -147,8 +152,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 350);
+            this.label3.Location = new System.Drawing.Point(9, 346);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 2;
@@ -157,7 +163,7 @@
             // guardar
             // 
             this.guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guardar.Location = new System.Drawing.Point(377, 328);
+            this.guardar.Location = new System.Drawing.Point(372, 324);
             this.guardar.Name = "guardar";
             this.guardar.Size = new System.Drawing.Size(98, 23);
             this.guardar.TabIndex = 1;
@@ -169,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 396);
+            this.ClientSize = new System.Drawing.Size(485, 392);
             this.Controls.Add(this.nivel);
             this.Controls.Add(this.periodo);
             this.Controls.Add(this.especialidad);
@@ -180,6 +186,7 @@
             this.Controls.Add(this.nuevo);
             this.Controls.Add(this.lista);
             this.Name = "AdminGrupos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Administrador de grupos";
             ((System.ComponentModel.ISupportInitialize)(this.nivel)).EndInit();
             this.ResumeLayout(false);

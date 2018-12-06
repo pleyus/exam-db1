@@ -41,12 +41,10 @@
             this.grupos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.now = new System.Windows.Forms.RadioButton();
-            this.spec = new System.Windows.Forms.RadioButton();
-            this.chkAllDay = new System.Windows.Forms.CheckBox();
+            this.todo_el_dia = new System.Windows.Forms.CheckBox();
             this.dia = new System.Windows.Forms.ComboBox();
-            this.hora = new System.Windows.Forms.ComboBox();
-            this.min = new System.Windows.Forms.ComboBox();
+            this.ahora = new System.Windows.Forms.Button();
+            this.hora = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // listView1
@@ -62,7 +60,7 @@
             this.columnHeader3});
             this.listView1.Location = new System.Drawing.Point(12, 52);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(719, 318);
+            this.listView1.Size = new System.Drawing.Size(634, 355);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -93,7 +91,7 @@
             // butAdminGrupos
             // 
             this.butAdminGrupos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butAdminGrupos.Location = new System.Drawing.Point(12, 376);
+            this.butAdminGrupos.Location = new System.Drawing.Point(12, 413);
             this.butAdminGrupos.Name = "butAdminGrupos";
             this.butAdminGrupos.Size = new System.Drawing.Size(122, 33);
             this.butAdminGrupos.TabIndex = 1;
@@ -104,32 +102,35 @@
             // ButAdminProfesores
             // 
             this.ButAdminProfesores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButAdminProfesores.Location = new System.Drawing.Point(140, 376);
+            this.ButAdminProfesores.Location = new System.Drawing.Point(140, 413);
             this.ButAdminProfesores.Name = "ButAdminProfesores";
             this.ButAdminProfesores.Size = new System.Drawing.Size(122, 33);
             this.ButAdminProfesores.TabIndex = 1;
             this.ButAdminProfesores.Text = "Administrar profesores";
             this.ButAdminProfesores.UseVisualStyleBackColor = true;
+            this.ButAdminProfesores.Click += new System.EventHandler(this.ButAdminProfesores_Click);
             // 
             // butAdminMaterias
             // 
             this.butAdminMaterias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butAdminMaterias.Location = new System.Drawing.Point(268, 376);
+            this.butAdminMaterias.Location = new System.Drawing.Point(268, 413);
             this.butAdminMaterias.Name = "butAdminMaterias";
             this.butAdminMaterias.Size = new System.Drawing.Size(122, 33);
             this.butAdminMaterias.TabIndex = 1;
             this.butAdminMaterias.Text = "Administrar materias";
             this.butAdminMaterias.UseVisualStyleBackColor = true;
+            this.butAdminMaterias.Click += new System.EventHandler(this.butAdminMaterias_Click);
             // 
             // butAdminClases
             // 
             this.butAdminClases.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butAdminClases.Location = new System.Drawing.Point(396, 376);
+            this.butAdminClases.Location = new System.Drawing.Point(396, 413);
             this.butAdminClases.Name = "butAdminClases";
             this.butAdminClases.Size = new System.Drawing.Size(122, 33);
             this.butAdminClases.TabIndex = 1;
             this.butAdminClases.Text = "Administrar clases";
             this.butAdminClases.UseVisualStyleBackColor = true;
+            this.butAdminClases.Click += new System.EventHandler(this.butAdminClases_Click);
             // 
             // grupos
             // 
@@ -158,40 +159,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Dia y hora";
             // 
-            // now
+            // todo_el_dia
             // 
-            this.now.AutoSize = true;
-            this.now.Location = new System.Drawing.Point(333, 26);
-            this.now.Name = "now";
-            this.now.Size = new System.Drawing.Size(53, 17);
-            this.now.TabIndex = 4;
-            this.now.TabStop = true;
-            this.now.Text = "Ahora";
-            this.now.UseVisualStyleBackColor = true;
-            this.now.CheckedChanged += new System.EventHandler(this.now_CheckedChanged);
-            // 
-            // spec
-            // 
-            this.spec.AutoSize = true;
-            this.spec.Location = new System.Drawing.Point(392, 26);
-            this.spec.Name = "spec";
-            this.spec.Size = new System.Drawing.Size(74, 17);
-            this.spec.TabIndex = 4;
-            this.spec.TabStop = true;
-            this.spec.Text = "Especifico";
-            this.spec.UseVisualStyleBackColor = true;
-            this.spec.CheckedChanged += new System.EventHandler(this.spec_CheckedChanged);
-            // 
-            // chkAllDay
-            // 
-            this.chkAllDay.AutoSize = true;
-            this.chkAllDay.Location = new System.Drawing.Point(658, 27);
-            this.chkAllDay.Name = "chkAllDay";
-            this.chkAllDay.Size = new System.Drawing.Size(79, 17);
-            this.chkAllDay.TabIndex = 6;
-            this.chkAllDay.Text = "Todo el dia";
-            this.chkAllDay.UseVisualStyleBackColor = true;
-            this.chkAllDay.CheckedChanged += new System.EventHandler(this.chkAllDay_CheckedChanged);
+            this.todo_el_dia.AutoSize = true;
+            this.todo_el_dia.Location = new System.Drawing.Point(487, 27);
+            this.todo_el_dia.Name = "todo_el_dia";
+            this.todo_el_dia.Size = new System.Drawing.Size(79, 17);
+            this.todo_el_dia.TabIndex = 6;
+            this.todo_el_dia.Text = "Todo el dia";
+            this.todo_el_dia.UseVisualStyleBackColor = true;
+            this.todo_el_dia.CheckedChanged += new System.EventHandler(this.chkAllDay_CheckedChanged);
             // 
             // dia
             // 
@@ -205,63 +182,40 @@
             "Jueves",
             "Viernes",
             "Sábado"});
-            this.dia.Location = new System.Drawing.Point(476, 25);
+            this.dia.Location = new System.Drawing.Point(333, 25);
             this.dia.Name = "dia";
             this.dia.Size = new System.Drawing.Size(72, 21);
             this.dia.TabIndex = 2;
             // 
+            // ahora
+            // 
+            this.ahora.Location = new System.Drawing.Point(572, 23);
+            this.ahora.Name = "ahora";
+            this.ahora.Size = new System.Drawing.Size(75, 23);
+            this.ahora.TabIndex = 7;
+            this.ahora.Text = "Ahora";
+            this.ahora.UseVisualStyleBackColor = true;
+            this.ahora.Click += new System.EventHandler(this.ahora_Click);
+            // 
             // hora
             // 
-            this.hora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.hora.FormattingEnabled = true;
-            this.hora.Items.AddRange(new object[] {
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20"});
-            this.hora.Location = new System.Drawing.Point(554, 25);
+            this.hora.CustomFormat = "HH:mm";
+            this.hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.hora.Location = new System.Drawing.Point(411, 25);
             this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(46, 21);
-            this.hora.TabIndex = 2;
-            // 
-            // min
-            // 
-            this.min.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.min.FormattingEnabled = true;
-            this.min.Items.AddRange(new object[] {
-            "00",
-            "10",
-            "20",
-            "30",
-            "40",
-            "50"});
-            this.min.Location = new System.Drawing.Point(606, 25);
-            this.min.Name = "min";
-            this.min.Size = new System.Drawing.Size(46, 21);
-            this.min.TabIndex = 2;
+            this.hora.Size = new System.Drawing.Size(70, 20);
+            this.hora.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 423);
-            this.Controls.Add(this.chkAllDay);
-            this.Controls.Add(this.spec);
-            this.Controls.Add(this.now);
+            this.ClientSize = new System.Drawing.Size(658, 460);
+            this.Controls.Add(this.hora);
+            this.Controls.Add(this.ahora);
+            this.Controls.Add(this.todo_el_dia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.min);
-            this.Controls.Add(this.hora);
             this.Controls.Add(this.dia);
             this.Controls.Add(this.grupos);
             this.Controls.Add(this.butAdminClases);
@@ -270,6 +224,7 @@
             this.Controls.Add(this.butAdminGrupos);
             this.Controls.Add(this.listView1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sesiones";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -292,12 +247,10 @@
         private System.Windows.Forms.ComboBox grupos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton now;
-        private System.Windows.Forms.RadioButton spec;
-        private System.Windows.Forms.CheckBox chkAllDay;
+        private System.Windows.Forms.CheckBox todo_el_dia;
         private System.Windows.Forms.ComboBox dia;
-        private System.Windows.Forms.ComboBox hora;
-        private System.Windows.Forms.ComboBox min;
+        private System.Windows.Forms.Button ahora;
+        private System.Windows.Forms.DateTimePicker hora;
     }
 }
 

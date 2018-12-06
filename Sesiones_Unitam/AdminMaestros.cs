@@ -10,45 +10,54 @@ using System.Windows.Forms;
 
 namespace Sesiones_Unitam
 {
-    public partial class AdminGrupos : Form
+    public partial class AdminMaestros : Form
     {
-        public AdminGrupos()
+        public AdminMaestros()
         {
             InitializeComponent();
         }
         public void Run()
         {
-            DataRowCollection D = DataBase.Select(Consultas.LISTAR_INFO_GRUPOS);
-            if(D != null)
-                foreach( DataRow d in D )
+            DataRowCollection D = DataBase.Select(Consultas.LISTAR_INFO_DOCENTES);
+            if (D != null)
+                foreach (DataRow d in D)
                 {
                     ListViewItem IT = new ListViewItem();
                     IT.Text = d["Id"].ToString();
-                    IT.SubItems.Add(d["Especialidad"].ToString());
-                    IT.SubItems.Add(d["Nivel"].ToString());
-                    IT.SubItems.Add(d["Periodo"].ToString());
+                    IT.SubItems.Add(d["Nombre"].ToString());
+                    IT.SubItems.Add(d["Apellido"].ToString());
+                    IT.SubItems.Add(d["Edad"].ToString());
+                    IT.SubItems.Add(d["Sexo"].ToString());
 
                     lista.Items.Add(IT);
                 }
         }
-
         private void lista_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lista.SelectedItems.Count > 0)
+            if (lista.SelectedItems.Count > 0)
             {
                 ListViewItem IT = lista.SelectedItems[0];
-                especialidad.Text = IT.SubItems[1].Text;
-                nivel.Value = int.Parse(IT.SubItems[2].Text);
-                periodo.Text = IT.SubItems[3].Text;
+                nombre.Text = IT.SubItems[1].Text;
+                apellidos.Text = IT.SubItems[2].Text;
+                edad.Value = int.Parse(IT.SubItems[3].Text);
+
+                string sex = IT.SubItems[4].Text;
+                sexo.SelectedIndex = (
+                    sex == "Mujer"
+                    ? 1
+                    : (sex == "Hombre"
+                        ? 2
+                        : 0));
+                
                 guardar.Enabled = true;
             }
-            else            
+            else
                 guardar.Enabled = false;
         }
 
         private void nuevo_Click(object sender, EventArgs e)
         {
-            if (!DataBase.Insert(Consultas.INSERTAR_GRUPO + " ('" + especialidad.Text+ "', " + nivel.Value + ", '" + periodo.Text + "')"))
+            if (!DataBase.Insert(Consultas.INSERTAR_DOCENTE + " ('" + nombre.Text + "', '" + apellidos.Text + "', " + edad.Value + ", " + sexo.SelectedIndex + ")"))
                 MessageBox.Show("No se pudo insertar el grupo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {

@@ -16,53 +16,33 @@ namespace Sesiones_Unitam
         {
             InitializeComponent();
         }
-        public string MOSTRAR_CLASES = "";
-        public string LISTAR_GRUPOS = "";
-
-        public string INSERTAR_GRUPO = "";
-        public string GUARDAR_GRUPO = "";
+        
 
         void Run()
         {
             if (grupos.SelectedIndex > 0)
             {
-                DataBase.Select(MOSTRAR_CLASES);
+                DataBase.Select(Consultas.MOSTRAR_CLASES);
             }
         }
         private void chkAllDay_CheckedChanged(object sender, EventArgs e)
         {
-            hora.Enabled = min.Enabled = !chkAllDay.Checked;
+            hora.Enabled = !todo_el_dia.Checked;
             Run();
         }
 
         private void butAdminGrupos_Click(object sender, EventArgs e)
         {
             AdminGrupos AG = new AdminGrupos();
-            AG.Owner = this;
             AG.ShowDialog();
             Run();
         }
 
-        private void now_CheckedChanged(object sender, EventArgs e)
-        {
-            if (now.Checked)
-                dia.Enabled = hora.Enabled = min.Enabled = chkAllDay.Enabled = false;
-            Run();
-        }
 
-        private void spec_CheckedChanged(object sender, EventArgs e)
-        {
-            if (spec.Checked)
-            {
-                hora.Enabled = min.Enabled = !chkAllDay.Checked;
-                dia.Enabled = chkAllDay.Enabled = true;
-            }
-            Run();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataRowCollection D = DataBase.Select(LISTAR_GRUPOS);
+            DataRowCollection D = DataBase.Select(Consultas.LISTAR_GRUPOS);
             grupos.Items.Clear();
             if (D != null)
             {
@@ -72,8 +52,44 @@ namespace Sesiones_Unitam
             }
             else grupos.Items.Add("(No hay grupos)");
 
-            now.Checked = true;
-            grupos.SelectedIndex = dia.SelectedIndex = hora.SelectedIndex = min.SelectedIndex = 0;
+            grupos.SelectedIndex = 0;
+            ahora_Click(null, null);
+            
+            Run();
+        }
+
+        private void ahora_Click(object sender, EventArgs e)
+        {
+            DateTime Date = DateTime.Now;
+
+            hora.Value = Date;
+            dia.SelectedIndex = ((int)Date.DayOfWeek);
+
+            if (sender != null)
+            {
+                todo_el_dia.Checked = false;
+                Run();
+            }
+        }
+
+        private void ButAdminProfesores_Click(object sender, EventArgs e)
+        {
+            AdminMaestros AM = new AdminMaestros();
+            AM.ShowDialog();
+            Run();
+        }
+
+        private void butAdminMaterias_Click(object sender, EventArgs e)
+        {
+            AdminMaterias AM = new AdminMaterias();
+            AM.ShowDialog();
+            Run();
+        }
+
+        private void butAdminClases_Click(object sender, EventArgs e)
+        {
+            AdminSesiones AS = new AdminSesiones();
+            AS.ShowDialog();
             Run();
         }
     }

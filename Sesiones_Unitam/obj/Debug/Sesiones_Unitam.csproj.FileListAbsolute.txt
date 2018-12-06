@@ -9,3 +9,17 @@ C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_U
 C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.csproj.CoreCompileInputs.cache
 C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.exe
 C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.pdb
+F:\proj\exam-db1\Sesiones_Unitam\bin\Debug\Sesiones_Unitam.exe.config
+F:\proj\exam-db1\Sesiones_Unitam\bin\Debug\Sesiones_Unitam.exe
+F:\proj\exam-db1\Sesiones_Unitam\bin\Debug\Sesiones_Unitam.pdb
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.csprojAssemblyReference.cache
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.AdminGrupos.resources
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.Form1.resources
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.Properties.Resources.resources
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.csproj.GenerateResource.cache
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.csproj.CoreCompileInputs.cache
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.exe
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.pdb
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.AdminMaestros.resources
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.AdminMaterias.resources
+F:\proj\exam-db1\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.AdminSesiones.resources

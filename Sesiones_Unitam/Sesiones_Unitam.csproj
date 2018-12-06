@@ -52,6 +52,25 @@
     <Compile Include="AdminGrupos.Designer.cs">
       <DependentUpon>AdminGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMaestros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMaestros.Designer.cs">
+      <DependentUpon>AdminMaestros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMaterias.Designer.cs">
+      <DependentUpon>AdminMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSesiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSesiones.Designer.cs">
+      <DependentUpon>AdminSesiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -63,6 +82,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminGrupos.resx">
       <DependentUpon>AdminGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMaestros.resx">
+      <DependentUpon>AdminMaestros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMaterias.resx">
+      <DependentUpon>AdminMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSesiones.resx">
+      <DependentUpon>AdminSesiones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
