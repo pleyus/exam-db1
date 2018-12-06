@@ -1,0 +1,11 @@
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\bin\Debug\Sesiones_Unitam.exe.config
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\bin\Debug\Sesiones_Unitam.exe
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\bin\Debug\Sesiones_Unitam.pdb
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.csprojAssemblyReference.cache
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.AdminGrupos.resources
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.Form1.resources
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.Properties.Resources.resources
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.csproj.GenerateResource.cache
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.csproj.CoreCompileInputs.cache
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.exe
+C:\Users\pleyu\source\repos\Sesiones_Unitam\Sesiones_Unitam\obj\Debug\Sesiones_Unitam.pdb
